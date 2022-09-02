@@ -1,0 +1,11 @@
+.card {
+   background-color: white;
+}
+
+.card h1 {
+   padding: 25px 0 10px 25px;
+}
+
+.card p {
+   padding: 0 25px 25px 25px;
+}

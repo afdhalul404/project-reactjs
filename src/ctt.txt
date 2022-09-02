@@ -1,0 +1,38 @@
+1. Props/ property
+   • props adlh objek yg digunakan untuk menyimpan data yg diterima dari luar component
+   • props dibuat didalam component
+   • digunakan untuk membuat komponen yg sma tapi memiliki value yang berbeda saat dipanggil
+      pembuatan props: 
+         this.props.namaPropsnyaApa
+      untuk memanggilnya sma kyk memberikan atribut pada tag html
+         namaPropsnyaApa = 'nilai yg dikasih'
+
+2. state
+   • state adlh objek yg digunakan untuk menyimpan data didalam component
+   • state dibuat didalam fungsi constructor:
+      constructor() {
+         super()
+         this.state = {
+            // nama state. karena berupa objek jadi bisa lebih dari satu. contohnya
+            Nama : 'Afdhalul',
+            Umur : 20
+         }
+      }
+   • state dpt diganti dengan : this.setState.namaStatenyaapa
+     contohnya:
+      { this.setState.Nama = 'Afdhalul Rahmat Septyo'}
+
+
+3. function pada component
+   • dituliskan setelah fungsi constructor
+   • langsung nama fungsinya tdk perlu pake inisialisasi function
+     contoh fungsi untuk mengubah value dari state 
+      namaFungsinyaApa = () => {           // nama fungsinya
+      this.setState({               // tdk pakai sama dengan, beda dengan pembuatan state klo setState dia pake tanda kurung
+         Nama : 'Rahmat',           // pemberian value state yang akan diubah
+         Umur : 25
+      }) 
+   }
+   • pemanggilan fungsi bisa pake event contoh pada button 
+      <button onClick={this.namaFungsiYgDibuat}>Ganti Namanya cuyy</button>
+     

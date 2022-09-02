@@ -1,0 +1,16 @@
+.single-page {
+   width: 90%;
+   height: 50px;
+   background-color: aqua;
+}
+
+.navbar ul{
+   display: flex;
+}
+
+ul li {
+   list-style: none;
+   margin-right: 50px;
+   font-weight: 900;
+   color: white;
+}
