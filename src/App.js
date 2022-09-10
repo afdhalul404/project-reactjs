@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import Template from './components/project1/Template'
+import React, { Component, useState } from 'react'
+// import Template from './components/project1/Template'
 // import Doc from './components/Doc'
 // import SinglePage from './components/SinglePage'
 // import StateHook from './components/StateHook'
@@ -8,17 +8,36 @@ import Template from './components/project1/Template'
 
 // single page apk
 
+function Tambah() {
+    const [count, setCount] = useState(1);
+    const kurang = () => setCount(count - 1)
 
-export default class App extends Component {
-  render() {
     return (
-      <div className='App' style={{display: 'flex', justifyContent: 'center'}}>
+      <>
+      <button onClick={kurang}>-</button>
+      <span>{count}</span>
+      <button onClick={() => setCount(count + 1)}>+</button>
+      </>
+    )
+
+}
+
+
+
+export default class App extends Component { 
+
+  render() {
+
+    return (
+      <div className='App'>
         {/* <TambahKurang /> */}
         {/* <Belajarprops /> */}
         {/* <StateHook /> */}
         {/* <SinglePage /> */}
         {/* <Doc /> */}
-        <Template />
+        {/* <Template /> */}
+        <Tambah />
+    
       </div>
     )
   }
